@@ -8,7 +8,7 @@ export const Hero = ({ setPage }: { setPage: (page: string) => void }) => {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.1 }}
-                className="inline-flex items-center px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm md:text-base text-secondary w-fit"
+                className="inline-flex items-center px-4 py-2 rounded-full bg-text/5 border border-text/10 text-sm md:text-base text-secondary w-fit"
             >
                 <span className="bg-secondary/20 text-secondary w-2 h-2 rounded-full mr-2 animate-pulse"></span>
                 Available for new opportunities
@@ -19,7 +19,7 @@ export const Hero = ({ setPage }: { setPage: (page: string) => void }) => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2 }}
-                    className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white"
+                    className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-text"
                 >
                     Building <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Intelligence</span> <br />
                     at the Edge.
@@ -44,7 +44,7 @@ export const Hero = ({ setPage }: { setPage: (page: string) => void }) => {
             >
                 <button
                     onClick={() => setPage('projects')}
-                    className="px-8 py-4 bg-white text-black font-bold rounded-lg hover:bg-slate-200 transition-colors flex items-center gap-2 group"
+                    className="px-8 py-4 bg-text text-background font-bold rounded-lg hover:bg-text/80 transition-colors flex items-center gap-2 group"
                 >
                     View Projects
                     <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
@@ -52,7 +52,7 @@ export const Hero = ({ setPage }: { setPage: (page: string) => void }) => {
 
                 <button
                     onClick={() => setPage('contact')}
-                    className="px-8 py-4 bg-white/5 text-white font-medium rounded-lg border border-white/10 hover:bg-white/10 transition-colors backdrop-blur-sm"
+                    className="px-8 py-4 bg-text/5 text-text font-medium rounded-lg border border-text/10 hover:bg-text/10 transition-colors backdrop-blur-sm"
                 >
                     Contact Me
                 </button>
@@ -64,9 +64,9 @@ export const Hero = ({ setPage }: { setPage: (page: string) => void }) => {
                 transition={{ delay: 0.6 }}
                 className="flex gap-6 pt-12 text-muted"
             >
-                <a href="https://github.com/Ananda-001" target="_blank" rel="noreferrer" className="hover:text-white group-[.light]:hover:text-black transition-colors"><Github size={24} /></a>
-                <a href="https://linkedin.com/in/grananda/" target="_blank" rel="noreferrer" className="hover:text-white group-[.light]:hover:text-black transition-colors"><Linkedin size={24} /></a>
-                <a href="mailto:guruvayoorra@wisc.edu" className="hover:text-white group-[.light]:hover:text-black transition-colors"><Mail size={24} /></a>
+                <a href="https://github.com/Ananda-001" target="_blank" rel="noreferrer" className="hover:text-text transition-colors"><Github size={24} /></a>
+                <a href="https://linkedin.com/in/grananda/" target="_blank" rel="noreferrer" className="hover:text-text transition-colors"><Linkedin size={24} /></a>
+                <a href="mailto:guruvayoorra@wisc.edu" className="hover:text-text transition-colors"><Mail size={24} /></a>
             </motion.div>
         </div>
     );

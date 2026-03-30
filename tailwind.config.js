@@ -7,13 +7,13 @@ export default {
     theme: {
         extend: {
             colors: {
-                background: '#0a0a0a',
-                surface: '#121212',
-                surfaceHighlight: '#1E1E1E',
-                primary: '#8b5cf6', // Violet 500
-                secondary: '#06b6d4', // Cyan 500
-                text: '#f8fafc',
-                muted: '#94a3b8',
+                background: 'var(--color-background)',
+                surface: 'var(--color-surface)',
+                surfaceHighlight: 'var(--color-surfaceHighlight)',
+                primary: 'var(--color-primary)',
+                secondary: 'var(--color-secondary)',
+                text: 'var(--color-text)',
+                muted: 'var(--color-muted)',
             },
             fontFamily: {
                 sans: ['Inter', 'sans-serif'],

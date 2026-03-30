@@ -37,7 +37,7 @@ export const Layout: React.FC<LayoutProps> = ({ children, currentPage, setPage }
             </div>
 
             {/* Sidebar Navigation */}
-            <nav className="w-20 md:w-64 h-full bg-surface/50 backdrop-blur-xl border-r border-white/5 flex flex-col p-4 z-50">
+            <nav className="w-20 md:w-64 h-full bg-surface/50 backdrop-blur-xl border-r border-text/5 flex flex-col p-4 z-50">
                 <div className="mb-8 flex items-center justify-center md:justify-start">
                     <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-primary/20">
                         A
@@ -51,8 +51,8 @@ export const Layout: React.FC<LayoutProps> = ({ children, currentPage, setPage }
                             key={item.id}
                             onClick={() => setPage(item.id)}
                             className={`w-full flex items-center p-3 rounded-xl transition-all duration-300 group relative overflow-hidden ${currentPage === item.id
-                                ? 'bg-white/10 text-white shadow-inner'
-                                : 'text-muted hover:text-white hover:bg-white/5'
+                                ? 'bg-text/10 text-text shadow-inner'
+                                : 'text-muted hover:text-text hover:bg-text/5'
                                 }`}
                         >
                             <item.icon size={20} className={`relative z-10 ${currentPage === item.id ? 'text-secondary' : ''}`} />
@@ -61,7 +61,7 @@ export const Layout: React.FC<LayoutProps> = ({ children, currentPage, setPage }
                             {currentPage === item.id && (
                                 <motion.div
                                     layoutId="activeNav"
-                                    className="absolute inset-0 bg-white/5 rounded-xl border border-white/10"
+                                    className="absolute inset-0 bg-text/5 rounded-xl border border-text/10"
                                 />
                             )}
                         </button>
@@ -74,7 +74,7 @@ export const Layout: React.FC<LayoutProps> = ({ children, currentPage, setPage }
 
                 <button
                     onClick={() => setIsLight(!isLight)}
-                    className="absolute bottom-4 left-1/2 -translate-x-1/2 md:translate-x-0 md:static md:mt-4 w-10 h-10 md:w-full flex items-center justify-center p-3 rounded-xl hover:bg-white/10 transition-colors text-muted hover:text-white group"
+                    className="absolute bottom-4 left-1/2 -translate-x-1/2 md:translate-x-0 md:static md:mt-4 w-10 h-10 md:w-full flex items-center justify-center p-3 rounded-xl hover:bg-text/10 transition-colors text-muted hover:text-text group"
                 >
                     {isLight ? (
                         <>

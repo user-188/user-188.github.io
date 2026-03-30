@@ -39,7 +39,7 @@ export const Experience = () => {
                 </p>
             </div>
 
-            <div className="relative border-l border-white/10 ml-3 md:ml-6 space-y-12 pb-12">
+            <div className="relative border-l border-text/10 ml-3 md:ml-6 space-y-12 pb-12">
                 {experiences.map((exp, index) => (
                     <div key={index} className="relative pl-8 md:pl-12">
                         {/* Timeline Dot */}
@@ -47,8 +47,8 @@ export const Experience = () => {
 
                         <div className="space-y-4">
                             <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
-                                <h3 className="text-2xl font-bold text-white">{exp.role}</h3>
-                                <span className="hidden md:inline text-white/20">|</span>
+                                <h3 className="text-2xl font-bold text-text">{exp.role}</h3>
+                                <span className="hidden md:inline text-text/20">|</span>
                                 <span className="text-xl text-secondary font-medium">{exp.company}</span>
                             </div>
 
@@ -63,15 +63,15 @@ export const Experience = () => {
                                 </div>
                             </div>
 
-                            <p className="text-slate-300 max-w-4xl leading-relaxed">
+                            <p className="text-muted/90 max-w-4xl leading-relaxed">
                                 {exp.description}
                             </p>
 
-                            <div className="bg-surface/50 rounded-xl p-6 border border-white/5">
-                                <h4 className="text-sm font-semibold text-white mb-3 uppercase tracking-wider">Key Achievements</h4>
+                            <div className="bg-surface/50 rounded-xl p-6 border border-text/5">
+                                <h4 className="text-sm font-semibold text-text mb-3 uppercase tracking-wider">Key Achievements</h4>
                                 <ul className="space-y-2">
                                     {exp.achievements.map((item, i) => (
-                                        <li key={i} className="flex items-start text-slate-400 text-sm md:text-base">
+                                        <li key={i} className="flex items-start text-muted/80 text-sm md:text-base">
                                             <span className="mr-2 text-primary mt-1.5 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
                                             {item}
                                         </li>

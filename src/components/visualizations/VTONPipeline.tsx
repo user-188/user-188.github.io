@@ -6,12 +6,7 @@ export const VTONPipeline = () => {
     const [isPlaying, setIsPlaying] = useState(true);
     const [progress, setProgress] = useState(0);
 
-    // Assets using proper Unsplash images
-    const ASSETS = {
-        model: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=1000&auto=format&fit=crop", // Distinct input model
-        cloth: "/vton_target_cloth_1774839673911.png",
-        result: "/vton_simulated_image_1774839618668.png" // Simulated generated image
-    };
+
 
     useEffect(() => {
         let interval: any;
@@ -64,7 +59,9 @@ export const VTONPipeline = () => {
                             className="relative w-48 h-64 rounded-lg overflow-hidden border-2 border-white/20 bg-slate-900"
                             layout
                         >
-                            <img src={ASSETS.model} className="w-full h-full object-cover opacity-80" alt="Model" />
+                            <div className="w-full h-full bg-slate-800 flex items-center justify-center opacity-80 border-2 border-dashed border-slate-600">
+                                <span className="text-white font-mono text-sm text-center">Model<br />Placeholder</span>
+                            </div>
                             <div className="absolute bottom-2 left-2 text-xs font-bold text-white bg-black/50 px-2 rounded">
                                 REFERENCE IMAGE
                             </div>
@@ -131,7 +128,11 @@ export const VTONPipeline = () => {
                                     exit={{ opacity: 0, x: 20, scale: 0.8 }}
                                     className="absolute inset-0"
                                 >
-                                    <img src={ASSETS.cloth} className="w-full h-full object-cover p-2" alt="Cloth" />
+                                    <div className="w-full h-full p-2">
+                                        <div className="w-full h-full bg-slate-800 flex items-center justify-center border-2 border-dashed border-slate-600">
+                                            <span className="text-white font-mono text-sm text-center">Target<br />Cloth<br />Placeholder</span>
+                                        </div>
+                                    </div>
                                     <div className="absolute bottom-2 left-2 text-xs font-bold text-white bg-black/50 px-2 rounded">
                                         TARGET CLOTH
                                     </div>
@@ -174,14 +175,15 @@ export const VTONPipeline = () => {
 
                         {/* FINAL RESULT */}
                         {stage === 'result' && (
-                            <motion.img
+                            <motion.div
                                 key="result"
-                                src={ASSETS.result}
                                 initial={{ opacity: 0, filter: 'blur(10px)' }}
-                                animate={{ opacity: 1, filter: 'blur(0px) hue-rotate(180deg)' }}
+                                animate={{ opacity: 1, filter: 'blur(0px)' }}
                                 transition={{ duration: 0.8 }}
-                                className="w-full h-full object-cover"
-                            />
+                                className="w-full h-full flex items-center justify-center bg-blue-600"
+                            >
+                                <span className="text-white font-mono text-sm font-bold text-center drop-shadow-lg">Generated<br />Result<br />Placeholder</span>
+                            </motion.div>
                         )}
                     </div>
                 </div>
