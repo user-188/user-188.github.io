@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #0a0a0a;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: start;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #0a0a0a;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+:root {
+  --color-background: #0a0a0a;
+  --color-surface: #121212;
+  --color-surfaceHighlight: #1E1E1E;
+  --color-primary: #8b5cf6;
+  --color-secondary: #06b6d4;
+  --color-text: #f8fafc;
+  --color-muted: #94a3b8;
+}
+
+:root.light {
+  --color-background: #f8fafc;
+  --color-surface: #ffffff;
+  --color-surfaceHighlight: #f1f5f9;
+  --color-primary: #6d28d9;  
+  --color-secondary: #0891b2;
+  --color-text: #0f172a;
+  --color-muted: #64748b;
+  color-scheme: light;
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+@theme {
+  --color-background: var(--color-background);
+  --color-surface: var(--color-surface);
+  --color-surfaceHighlight: var(--color-surfaceHighlight);
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-text: var(--color-text);
+  --color-muted: var(--color-muted);
+
+  --font-sans: Inter, sans-serif;
+
+  --animate-pulse: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
